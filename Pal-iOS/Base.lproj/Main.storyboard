@@ -19,14 +19,11 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yiX-7U-Vwi">
                                 <rect key="frame" x="150" y="285" width="300" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PG7-Vx-jyw"/>
                                     <constraint firstAttribute="width" constant="300" id="WvH-qj-RMz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go"/>
-                                <connections>
-                                    <action selector="textFieldEndedEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="TUY-6D-OwH"/>
-                                    <action selector="textFieldStartedEditing:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="h3S-Im-5oA"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, how can I help you?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aF-UB-CDF">
                                 <rect key="frame" x="154" y="241" width="293" height="36"/>
