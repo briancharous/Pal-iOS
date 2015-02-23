@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F0D25BB1A85344200A42167 /* PalResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D25BA1A85344200A42167 /* PalResponseView.swift */; };
+		9F3D5C571A93074800045C17 /* home.css in Resources */ = {isa = PBXBuildFile; fileRef = 9F3D5C561A93074800045C17 /* home.css */; };
+		9F3D5C591A9316E900045C17 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3D5C581A9316E900045C17 /* CoreLocation.framework */; };
 		9F6C34DC1A846D5B0036AF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C34DB1A846D5B0036AF56 /* AppDelegate.swift */; };
 		9F6C34DE1A846D5B0036AF56 /* PalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C34DD1A846D5B0036AF56 /* PalViewController.swift */; };
 		9F6C34E11A846D5B0036AF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6C34DF1A846D5B0036AF56 /* Main.storyboard */; };
@@ -17,8 +18,9 @@
 		9FA6FE4F1A848B4F00692FF9 /* PalConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6FE4E1A848B4F00692FF9 /* PalConnection.swift */; };
 		9FDB26391A8697CF00BB8CD7 /* PalResponseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FDB26381A8697CF00BB8CD7 /* PalResponseView.xib */; };
 		9FDB263B1A86CC5100BB8CD7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDB263A1A86CC5100BB8CD7 /* AVFoundation.framework */; };
-		9FDB263F1A86DF9300BB8CD7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDB263E1A86DF9300BB8CD7 /* WebKit.framework */; };
 		9FDB26411A86E2E200BB8CD7 /* ResponseTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 9FDB26401A86E2C900BB8CD7 /* ResponseTemplate.html */; };
+		9FE115891A9ABAA500BA819B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE115881A9ABAA500BA819B /* Social.framework */; };
+		9FE1158B1A9ABAED00BA819B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE1158A1A9ABAED00BA819B /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F0D25BA1A85344200A42167 /* PalResponseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PalResponseView.swift; sourceTree = "<group>"; };
+		9F3D5C561A93074800045C17 /* home.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = home.css; sourceTree = "<group>"; };
+		9F3D5C581A9316E900045C17 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9F6C34D61A846D5B0036AF56 /* Pal-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pal-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6C34DA1A846D5B0036AF56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F6C34DB1A846D5B0036AF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +51,8 @@
 		9FDB263A1A86CC5100BB8CD7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9FDB263E1A86DF9300BB8CD7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9FDB26401A86E2C900BB8CD7 /* ResponseTemplate.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = ResponseTemplate.html; sourceTree = "<group>"; };
+		9FE115881A9ABAA500BA819B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9FE1158A1A9ABAED00BA819B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FDB263F1A86DF9300BB8CD7 /* WebKit.framework in Frameworks */,
+				9FE1158B1A9ABAED00BA819B /* Accounts.framework in Frameworks */,
+				9FE115891A9ABAA500BA819B /* Social.framework in Frameworks */,
+				9F3D5C591A9316E900045C17 /* CoreLocation.framework in Frameworks */,
 				9FDB263B1A86CC5100BB8CD7 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +80,9 @@
 		9F6C34CD1A846D5B0036AF56 = {
 			isa = PBXGroup;
 			children = (
+				9FE1158A1A9ABAED00BA819B /* Accounts.framework */,
+				9FE115881A9ABAA500BA819B /* Social.framework */,
+				9F3D5C581A9316E900045C17 /* CoreLocation.framework */,
 				9FDB263E1A86DF9300BB8CD7 /* WebKit.framework */,
 				9FDB263A1A86CC5100BB8CD7 /* AVFoundation.framework */,
 				9F6C34D81A846D5B0036AF56 /* Pal-iOS */,
@@ -93,7 +103,6 @@
 		9F6C34D81A846D5B0036AF56 /* Pal-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9F0D25BA1A85344200A42167 /* PalResponseView.swift */,
 				9F6C34DB1A846D5B0036AF56 /* AppDelegate.swift */,
 				9F6C34DD1A846D5B0036AF56 /* PalViewController.swift */,
 				9FA6FE4E1A848B4F00692FF9 /* PalConnection.swift */,
@@ -102,6 +111,7 @@
 				9F6C34E21A846D5B0036AF56 /* Images.xcassets */,
 				9F6C34E41A846D5B0036AF56 /* LaunchScreen.xib */,
 				9FDB26401A86E2C900BB8CD7 /* ResponseTemplate.html */,
+				9F3D5C561A93074800045C17 /* home.css */,
 				9F6C34D91A846D5B0036AF56 /* Supporting Files */,
 			);
 			path = "Pal-iOS";
@@ -214,6 +224,7 @@
 			files = (
 				9FDB26411A86E2E200BB8CD7 /* ResponseTemplate.html in Resources */,
 				9F6C34E11A846D5B0036AF56 /* Main.storyboard in Resources */,
+				9F3D5C571A93074800045C17 /* home.css in Resources */,
 				9F6C34E61A846D5B0036AF56 /* LaunchScreen.xib in Resources */,
 				9F6C34E31A846D5B0036AF56 /* Images.xcassets in Resources */,
 				9FDB26391A8697CF00BB8CD7 /* PalResponseView.xib in Resources */,
@@ -237,7 +248,6 @@
 				9F6C34DE1A846D5B0036AF56 /* PalViewController.swift in Sources */,
 				9F6C34DC1A846D5B0036AF56 /* AppDelegate.swift in Sources */,
 				9FA6FE4F1A848B4F00692FF9 /* PalConnection.swift in Sources */,
-				9F0D25BB1A85344200A42167 /* PalResponseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
