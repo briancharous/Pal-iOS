@@ -251,7 +251,7 @@ class PalViewController: UIViewController, UITextFieldDelegate, CLLocationManage
         var responseString = templateString!.stringByReplacingOccurrencesOfString("{0}", withString: query, options: NSStringCompareOptions.LiteralSearch, range: nil)
         if (data != nil) {
             let dataDiv = "<div class=\"data\">\(data)</div>"
-            let summaryString = "\(summary)\(data!)"
+            let summaryString = "\(summary)<br><br>\(data!)"
             responseString = responseString.stringByReplacingOccurrencesOfString("{1}", withString: summaryString, options: NSStringCompareOptions.LiteralSearch, range: nil)
         }
         else {
