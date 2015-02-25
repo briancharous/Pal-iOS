@@ -31,10 +31,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TGs-O1-JBC">
+                                <rect key="frame" x="398" y="325" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXh-Q2-8MH">
+                                <rect key="frame" x="329" y="330" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="TGs-O1-JBC" firstAttribute="centerY" secondItem="LXh-Q2-8MH" secondAttribute="centerY" id="B38-EB-yIk"/>
+                            <constraint firstItem="TGs-O1-JBC" firstAttribute="centerY" secondItem="LXh-Q2-8MH" secondAttribute="centerY" id="ECH-CA-XKz"/>
+                            <constraint firstItem="TGs-O1-JBC" firstAttribute="top" secondItem="yiX-7U-Vwi" secondAttribute="bottom" constant="10" id="HPj-zI-EZH"/>
+                            <constraint firstItem="TGs-O1-JBC" firstAttribute="trailing" secondItem="2aF-UB-CDF" secondAttribute="trailing" id="Jjm-qz-RG0"/>
                             <constraint firstAttribute="centerX" secondItem="2aF-UB-CDF" secondAttribute="centerX" id="ZPo-9p-LBX"/>
+                            <constraint firstItem="TGs-O1-JBC" firstAttribute="leading" secondItem="LXh-Q2-8MH" secondAttribute="trailing" constant="20" id="c01-vP-hOe"/>
                             <constraint firstItem="yiX-7U-Vwi" firstAttribute="top" secondItem="2aF-UB-CDF" secondAttribute="bottom" constant="8" id="dO0-I2-2lx"/>
                             <constraint firstAttribute="centerX" secondItem="yiX-7U-Vwi" secondAttribute="centerX" id="omo-KS-eIc"/>
                             <constraint firstAttribute="centerY" secondItem="yiX-7U-Vwi" secondAttribute="centerY" id="qSg-Rq-nEd"/>
@@ -43,6 +57,8 @@
                     <connections>
                         <outlet property="inputTextBox" destination="yiX-7U-Vwi" id="obX-rk-LZX"/>
                         <outlet property="prompt" destination="2aF-UB-CDF" id="yZ9-T7-Xgu"/>
+                        <outlet property="speakLabel" destination="LXh-Q2-8MH" id="fbB-xO-gbu"/>
+                        <outlet property="speakSwitch" destination="TGs-O1-JBC" id="stJ-nL-KSP"/>
                         <outlet property="textBoxWidth" destination="WvH-qj-RMz" id="W5y-n8-Ece"/>
                         <outlet property="textBoxYConstraint" destination="qSg-Rq-nEd" id="eCi-1N-2Cv"/>
                     </connections>

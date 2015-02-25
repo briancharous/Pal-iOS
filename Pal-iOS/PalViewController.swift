@@ -10,6 +10,7 @@ import CoreLocation
 import UIKit
 import Social
 import Accounts
+import AVFoundation
 
 class PalViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate, UIWebViewDelegate {
     
@@ -17,6 +18,8 @@ class PalViewController: UIViewController, UITextFieldDelegate, CLLocationManage
     @IBOutlet weak var textBoxYConstraint:NSLayoutConstraint?
     @IBOutlet weak var textBoxWidth:NSLayoutConstraint?
     @IBOutlet weak var prompt:UILabel?
+    @IBOutlet weak var speakLabel:UILabel?
+    @IBOutlet weak var speakSwitch:UISwitch?
     
     let palConnection = PalConnection()
     let palResponseView = UIWebView(frame: CGRectZero)
@@ -89,6 +92,9 @@ class PalViewController: UIViewController, UITextFieldDelegate, CLLocationManage
                 case 1:
                     // success, just update the response view
                     if let summary = result.objectForKey("summary") as? String {
+                        dispatch_async(dispatch_queue_create("com.pal.pal", nil), {
+                            self.speakIfAppropriate(summary)
+                        })
                         let responseString = formatResponse(query as NSString, summary: summary, data: data)
                         webViewLoadHTMLString(responseString)
                     }
@@ -99,6 +105,19 @@ class PalViewController: UIViewController, UITextFieldDelegate, CLLocationManage
                     // do something about external actions
                 default: ()
                 }
+            }
+        }
+    }
+    
+    func speakIfAppropriate(phrase: String) {
+        if (speakSwitch != nil) {
+            if speakSwitch!.on {
+                let utterance = AVSpeechUtterance(string: phrase)
+                // why is AVSpeechUtteranceDefaultSpeechRate SO FAST?
+                utterance.rate = 0.2
+                let synthesizer = AVSpeechSynthesizer()
+                synthesizer.speakUtterance(utterance)
+                
             }
         }
     }
@@ -259,6 +278,8 @@ class PalViewController: UIViewController, UITextFieldDelegate, CLLocationManage
             self.textBoxYConstraint?.constant = halfHeight - textboxOffset
             self.textBoxWidth?.constant = self.view.frame.size.width - 4
             self.prompt?.alpha = 0
+            self.speakLabel?.alpha = 0
+            self.speakSwitch?.alpha = 0
             self.view.layoutIfNeeded()
         })
     }
@@ -284,6 +305,8 @@ class PalViewController: UIViewController, UITextFieldDelegate, CLLocationManage
             self.textBoxYConstraint?.constant = 0
             self.textBoxWidth?.constant = self.kTextBoxWidth
             self.prompt?.alpha = 1
+            self.speakLabel?.alpha = 1
+            self.speakSwitch?.alpha = 1
             self.palResponseView.removeFromSuperview()
             self.palResponseView.removeConstraints(self.palResponseView.constraints())
             self.view.layoutIfNeeded()
